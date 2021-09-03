@@ -39,12 +39,12 @@ export default class App extends Component {
     return (
       <div class="main">
         <img src={logo} className="App-logo" alt="logo" />
-        <h2>Count: { count }</h2>
+        <h2 data-testid='count'>Count: { count }</h2>
         <div>
-          <Button title = { '+' } task={ () => this.incrementCount() } />
-          <Button title = { '-' } task={ () => this.decrementCount() } />
-          <Button title = { 'x2' } task={ () => this.double() } />
-          <Button title = { '0' } task={ () => this.toZero() } />
+          <Button testid='plus' title = { '+' } task={ () => this.incrementCount() } />
+          <Button testid='minus' title = { '-' } task={ () => this.decrementCount() } />
+          <Button testid='double' title = { 'x2' } task={ () => this.double() } />
+          <Button testid='to-zero' title = { '0' } task={ () => this.toZero() } />
         </div>
       </div>
     );
